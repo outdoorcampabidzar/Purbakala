@@ -1,0 +1,1 @@
+INSERT INTO "public"."profiles" ("id", "email", "full_name", "phone", "created_at", "username", "birth_date", "identity_type", "identity_number", "address") VALUES ('785fe2be-fb3d-4d2d-8b2e-011f32b012be', 'faqihsetyawan41@gmail.com', 'Given', '089509349428', '2026-07-21 14:20:53.784724+00', 'Givenmadoka', null, null, null, null);

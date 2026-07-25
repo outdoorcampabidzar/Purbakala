@@ -17,6 +17,8 @@ alter table public.profiles add column if not exists address text;
 create unique index if not exists profiles_username_unique on public.profiles (lower(username)) where username is not null;
 
 alter table public.profiles enable row level security;
+drop policy if exists "Member can view own profile" on public.profiles;
+drop policy if exists "Member can update own profile" on public.profiles;
 create policy "Member can view own profile" on public.profiles for select using (auth.uid() = id);
 create policy "Member can update own profile" on public.profiles for update using (auth.uid() = id);
 
